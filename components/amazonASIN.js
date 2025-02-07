@@ -4,12 +4,16 @@ const {getRandomHeaders} = require("../api/Headers");
 
 const headers = getRandomHeaders();
 
+const instance = axios.create({
+    timeout: 120000, // 120 saniye
+});
+
 // Amazon ürün sayfası URL'si (Örnek bir ürün URL'si)
 const urlASIN = "https://www.amazon.com/dp/";
 
 const amazonASIN = async (ASIN) => {
     let data = {};
-    await axios
+    await instance
         .get(urlASIN + ASIN, { headers })
         .then((response) => {
             // HTML içeriğini cheerio ile ayrıştırıyoruz

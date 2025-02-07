@@ -1,13 +1,11 @@
 const axios = require('axios');
 const { JSDOM } = require('jsdom');
 const { getRandomHeaders } = require("../api/Headers");
-
 const headers = getRandomHeaders();
 
 const bestSellerUrl = 'https://www.amazon.com/Best-Sellers/zgbs';
 
 // const proxyConfig = {
-//     protocol: 'http',
 //     host: "open.proxymesh.com", // ProxyMesh'ten aldığın proxy adresi
 //     port: 31280, // Proxy portu
 //     auth: {
@@ -16,11 +14,15 @@ const bestSellerUrl = 'https://www.amazon.com/Best-Sellers/zgbs';
 //     }
 // };
 
+const instance = axios.create({
+    timeout: 120000, // 120 saniye
+});
+
 const bestSeller = async () => {
     let again = true;
     while (again) {
         try {
-            const { data } = await axios.get(bestSellerUrl, {
+            const { data } = await instance.get(bestSellerUrl, {
                 headers: headers,
                 // proxy: proxyConfig
             });

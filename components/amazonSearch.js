@@ -4,6 +4,10 @@ const { JSDOM } = require('jsdom');
 
 const headers = getRandomHeaders();
 
+const instance = axios.create({
+    timeout: 120000, // 120 saniye
+});
+
 const amazonSearch = async (searchQuery) => {
     const baseUrl = `https://www.amazon.com/s?k=${encodeURIComponent(searchQuery)}`;
     let currentPage = 1;
@@ -15,7 +19,7 @@ const amazonSearch = async (searchQuery) => {
     let again = true;
     while (again) {
         try {
-            const { data } = await axios.get(url, { headers });
+            const { data } = await instance.get(url, { headers });
             const dom = new JSDOM(data);
             const document = dom.window.document;
 

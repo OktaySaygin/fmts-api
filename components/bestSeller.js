@@ -1,7 +1,9 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { HttpsProxyAgent } = require('https-proxy-agent');
+const { HttpsProxyAgent } = require('https-proxy-agent'); // Proxy agent doğru şekilde import edildi
+const fs = require('fs');
 const {fetchProxies} = require("../api/fetchProxies");
+
 
 const headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
@@ -11,13 +13,22 @@ const headers = {
 
 const bestSellerUrl = 'https://www.amazon.com/Best-Sellers/zgbs';
 
+// Proxy listesini yükle
+// const proxyList = fs.readFileSync('./api/proxy.txt', 'utf-8').split('\n').map(p => p.trim());
+
+// // Proxy seçme fonksiyonu
+// const getRandomProxy = () => {
+//     const randomIndex = Math.floor(Math.random() * proxyList.length);
+//     return proxyList[randomIndex];
+// };
+
 const bestSeller = async () => {
     try {
         let success = false;
         let data = null;
         const myProxy = await fetchProxies();
         while (!success) {
-            // const proxy = getRandomProxy();
+            //const proxy = getRandomProxy();
             const proxy = '54.224.215.61:8888';
             console.log(`Denenen Proxy: ${myProxy}`);
 
@@ -28,7 +39,7 @@ const bestSeller = async () => {
                 const response = await axios.get(bestSellerUrl, {
                     headers: headers,
                     agent: agent, // Proxy agent ekleniyor
-                    timeout: 5000, // Timeout süresi
+                    timeout: 60000, // Timeout süresi
                 });
 
                 data = response.data; // Veri çekildi

@@ -7,10 +7,22 @@ router.get('/', (req, res) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="6asEI9wd2UdO6iMj2Y6tt8A0sG9EKiIaIOcDsFed">
     <title>Ramadan Widget</title>
-    <link rel="stylesheet" href="/css/mobile/style.css?id=3051b5c93f0373f7e593d900f6ab4f02">
+    <link rel="stylesheet" href="/css/mobile/style.css?id=...">
+ 
+    <!-- ✅ imsakiye.js'den ÖNCE ekleyin -->
+    <script>
+        document.addEventListener('click', function(e) {
+            var target = e.target;
+            while (target && target.tagName !== 'A') {
+                target = target.parentElement;
+            }
+            if (target && target.getAttribute('href')) {
+                e.stopImmediatePropagation();
+                window.location.href = target.getAttribute('href');
+            }
+        }, true);
+    </script>
 </head>
 <body>
     <section data-type="ramadanWidget" class="mb-4 w-full flex col-span-12 row-span-1 flex-col px-2">

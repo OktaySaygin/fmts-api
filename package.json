@@ -5,12 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node api/index.js",
-    "dev": "nodemon api/index.js"
+    "dev": "nodemon api/index.js",
+    "linkforty": "node linkforty-server.mjs",
+    "linkforty:dev": "nodemon --experimental-vm-modules linkforty-server.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@linkforty/core": "^1.4.4",
     "axios": "^1.7.9",
     "cheerio": "^1.0.0",
     "express": "^4.21.1",

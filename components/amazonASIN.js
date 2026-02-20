@@ -55,10 +55,11 @@ const amazonASIN = async (ASIN) => {
             }
 
             // Amazon's Choice kontrolü
-            const isAmazonChoice = $("span.ac-badge-text-primary:contains('Amazon')")
-                .next("span.ac-badge-text-secondary:contains('Choice')")
-                .length > 0;
-            // const isAmazonChoice = $("span.ac-badge-rectangle").length > 0; //TODO: ikiside calisiyor
+            const isAmazonChoice =
+                $("#acBadge_feature_div").length > 0 ||
+                $(".ac-badge-rectangle").length > 0 ||
+                $("span.ac-badge-text-primary").length > 0 ||
+                $("[id^='acBadge']").length > 0;
 
             // Ürün fiyatı
             const priceContainer = $(".a-price"); // Fiyat kapsayıcısını seçiyoruz

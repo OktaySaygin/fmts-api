@@ -38,15 +38,15 @@ router.get('/allUsers', async (req, res) => {
     }
 });
 
-// router.post('/deleteUser', async (req, res) => {
-//     const id = req.body.id;
-//     try {
-//         const results = await deleteUser(id);
-//         res.json(results);
-//     } catch (error) {
-//         res.status(500).json({ error: 'An error occurred while deleting user.' });
-//     }
-// });
+router.get('/deleteUser', async (req, res) => {
+    //const id = req.body.id;
+    try {
+        const results = await deleteUser("699da6138f367b7ec8eda405");
+        res.json(results);
+    } catch (error) {
+        res.status(500).json({ error: 'An error occurred while deleting user.' });
+    }
+});
 
 // router.post('/updateUser', async (req, res) => {
 //     const id = req.body.id;

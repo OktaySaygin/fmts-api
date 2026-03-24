@@ -14,7 +14,7 @@ router.post('/createAccount', async (req, res) => {
         const results = await createAccount(email, username, password);
         res.json(results);
     } catch (error) {
-        res.status(500).json({ error: 'An error occurred while creating account.' });
+        res.status(500).json({ error: error.message });
     }   
 });
 
@@ -25,7 +25,7 @@ router.post('/login', async (req, res) => {
         const results = await login(username, password);
         res.json(results);
     } catch (error) {
-        res.status(500).json({ error: 'An error occurred while logging in.' });
+        res.status(500).json({ error: error.message });
     }
 });
 
@@ -34,7 +34,7 @@ router.get('/allUsers', async (req, res) => {
         const results = await allUsers();
         res.json(results);
     } catch (error) {
-        res.status(500).json({ error: 'An error occurred while getting all users.' });
+        res.status(500).json({ error: error.message });
     }
 });
 

@@ -3,7 +3,7 @@ const router = express.Router();
 const { createAccount } = require('./components/createAccount');
 const { login } = require('./components/login');
 const { allUsers } = require('./components/allUsers');
-// const { deleteUser } = require('./components/deleteUser');
+const { deleteUser } = require('./components/deleteUser');
 // const { updateUser } = require('./components/updateUser');
 
 router.post('/createAccount', async (req, res) => {

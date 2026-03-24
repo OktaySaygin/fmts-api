@@ -15,10 +15,17 @@
   "dependencies": {
     "@linkforty/core": "^1.4.4",
     "axios": "^1.7.9",
+    "bcryptjs": "^3.0.3",
     "cheerio": "^1.0.0",
+    "dotenv": "^17.3.1",
     "express": "^4.21.1",
+    "google-auth-library": "^10.6.2",
+    "http-proxy-middleware": "^3.0.5",
     "https-proxy-agent": "^7.0.6",
-    "nodemon": "^3.1.9"
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.2.2",
+    "nodemon": "^3.1.9",
+    "pm2": "^6.0.14"
   },
   "description": "",
   "packageManager": "yarn@3.6.4+sha512.e70835d4d6d62c07be76b3c1529cb640c7443f0fe434ef4b6478a5a399218cbaf1511b396b3c56eb03bc86424cff2320f6167ad2fde273aa0df6e60b7754029f"

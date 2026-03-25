@@ -6,6 +6,7 @@ const { allUsers } = require('./components/allUsers');
 const { deleteUser } = require('./components/deleteUser');
 const { updateScore } = require('./components/updateScore');
 const { updateDiamond } = require('./components/updateDiamond');
+const { shoppingList } = require('./components/shoppingList');
 
 router.post('/createAccount', async (req, res) => {
     const email = req.body.email;
@@ -63,6 +64,15 @@ router.post('/updateDiamond', async (req, res) => {
     const { userId, diamond } = req.body;
     try {
         const results = await updateDiamond(userId, diamond);
+        res.json(results);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.get('/shoppingList', async (req, res) => {
+    try {
+        const results = await shoppingList();
         res.json(results);
     } catch (error) {
         res.status(500).json({ error: error.message });

@@ -1,0 +1,179 @@
+{
+    "shoppingList": {
+        "hats": {
+            "type": "Hats",
+            "items": [
+                {
+                    "id": 1,
+                    "name": "Hat 1",
+                    "price": 100
+                },
+                {
+                    "id": 2,
+                    "name": "Hat 2",
+                    "price": 200
+                },
+                {
+                    "id": 3,
+                    "name": "Hat 3",
+                    "price": 300
+                },
+                {
+                    "id": 4,
+                    "name": "Hat 4",
+                    "price": 400
+                },
+                {
+                    "id": 5,
+                    "name": "Hat 5",
+                    "price": 500
+                },
+                {
+                    "id": 6,
+                    "name": "Hat 6",
+                    "price": 600
+                },
+                {
+                    "id": 7,
+                    "name": "Hat 7",
+                    "price": 700
+                },
+                {
+                    "id": 8,
+                    "name": "Hat 8",
+                    "price": 800
+                }
+            ]
+        },
+        "eyewears": {
+            "type": "Eyewears",
+            "items": [
+                {
+                    "id": 1,
+                    "name": "Eyewear 1",
+                    "price": 100
+                },
+                {
+                    "id": 2,
+                    "name": "Eyewear 2",
+                    "price": 200
+                },
+                {
+                    "id": 3,
+                    "name": "Eyewear 3",
+                    "price": 300
+                },
+                {
+                    "id": 4,
+                    "name": "Eyewear 4",
+                    "price": 400
+                },
+                {
+                    "id": 5,
+                    "name": "Eyewear 5",
+                    "price": 500
+                },
+                {
+                    "id": 6,
+                    "name": "Eyewear 6",
+                    "price": 600
+                },
+                {
+                    "id": 7,
+                    "name": "Eyewear 7",
+                    "price": 700
+                },
+                {
+                    "id": 8,
+                    "name": "Eyewear 8",
+                    "price": 800
+                },
+                {
+                    "id": 9,
+                    "name": "Eyewear 9",
+                    "price": 900
+                },
+                {
+                    "id": 10,
+                    "name": "Eyewear 10",
+                    "price": 1000
+                },
+                {
+                    "id": 11,
+                    "name": "Eyewear 11",
+                    "price": 1100
+                },
+                {
+                    "id": 12,
+                    "name": "Eyewear 12",
+                    "price": 1200
+                },
+                {
+                    "id": 13,
+                    "name": "Eyewear 13",
+                    "price": 1300
+                },
+                {
+                    "id": 14,
+                    "name": "Eyewear 14",
+                    "price": 1400
+                },
+                {
+                    "id": 15,
+                    "name": "Eyewear 15",
+                    "price": 1500
+                },
+                {
+                    "id": 16,
+                    "name": "Eyewear 16",
+                    "price": 1600
+                },
+                {
+                    "id": 17,
+                    "name": "Eyewear 17",
+                    "price": 1700
+                },
+                {
+                    "id": 18,
+                    "name": "Eyewear 18",
+                    "price": 1800
+                },
+                {
+                    "id": 19,
+                    "name": "Eyewear 19",
+                    "price": 1900
+                },
+                {
+                    "id": 20,
+                    "name": "Eyewear 20",
+                    "price": 2000
+                },
+                {
+                    "id": 21,
+                    "name": "Eyewear 21",
+                    "price": 2100
+                },
+                {
+                    "id": 22,
+                    "name": "Eyewear 22",
+                    "price": 2200
+                },
+                {
+                    "id": 23,
+                    "name": "Eyewear 23",
+                    "price": 2300
+                },
+                {
+                    "id": 24,
+                    "name": "Eyewear 24",
+                    "price": 2400
+                },
+                {
+                    "id": 25,
+                    "name": "Eyewear 25",
+                    "price": 2500
+                }
+            ]
+        }
+    }
+}

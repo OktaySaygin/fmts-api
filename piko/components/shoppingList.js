@@ -1,4 +1,4 @@
-const shoppingListData = require("../example/shoppingList.json");
+const shoppingListData = require("../../example/shoppingList.json");
     
 const shoppingList = async () => {
     return shoppingListData;

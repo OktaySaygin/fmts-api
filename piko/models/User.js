@@ -24,8 +24,16 @@ const userSchema = new mongoose.Schema(
             enum: ['local', 'google', 'apple'], 
             default: 'local' 
         },
-        providerId: { 
-            type: String 
+        providerId: {
+            type: String
+        },
+        score: {
+            type: Number,
+            default: 0,
+        },
+        diamond: {
+            type: Number,
+            default: 0,
         },
     },
     { timestamps: true }

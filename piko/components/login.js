@@ -38,6 +38,8 @@ const login = async (username, password) => {
             username: user.username,
             name: user.name,
             surname: user.surname,
+            score: user.score,
+            diamond: user.diamond,
         },
     };
 };

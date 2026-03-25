@@ -4,7 +4,8 @@ const { createAccount } = require('./components/createAccount');
 const { login } = require('./components/login');
 const { allUsers } = require('./components/allUsers');
 const { deleteUser } = require('./components/deleteUser');
-// const { updateUser } = require('./components/updateUser');
+const { updateScore } = require('./components/updateScore');
+const { updateDiamond } = require('./components/updateDiamond');
 
 router.post('/createAccount', async (req, res) => {
     const email = req.body.email;
@@ -41,26 +42,32 @@ router.get('/allUsers', async (req, res) => {
 router.get('/deleteUser', async (req, res) => {
     //const id = req.body.id;
     try {
-        const results = await deleteUser("699da6138f367b7ec8eda405");
+        const results = await deleteUser("69c28c37bc19b6f5654ad956");
         res.json(results);
     } catch (error) {
         res.status(500).json({ error: 'An error occurred while deleting user.' });
     }
 });
 
-// router.post('/updateUser', async (req, res) => {
-//     const id = req.body.id;
-//     const email = req.body.email;
-//     const username = req.body.username;
-//     const phone = req.body.phone;
-//     const name = req.body.name;
-//     const surname = req.body.surname;
-//     try {
-//         const results = await updateUser(id, email, username, phone, name, surname);
-//         res.json(results);
-//     } catch (error) {
-//         res.status(500).json({ error: 'An error occurred while updating user.' });
-//     }
-// });
+router.post('/updateScore', async (req, res) => {
+    const { userId, score } = req.body;
+    try {
+        const results = await updateScore(userId, score);
+        res.json(results);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.post('/updateDiamond', async (req, res) => {
+    const { userId, diamond } = req.body;
+    try {
+        const results = await updateDiamond(userId, diamond);
+        res.json(results);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 module.exports = router;
 

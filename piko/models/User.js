@@ -35,6 +35,16 @@ const userSchema = new mongoose.Schema(
             type: Number,
             default: 0,
         },
+        inventory: {
+            hats: {
+                type: [String],
+                default: [],
+            },
+            eyewears: {
+                type: [String],
+                default: [],
+            },
+        },
     },
     { timestamps: true }
 );

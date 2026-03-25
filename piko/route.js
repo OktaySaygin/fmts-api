@@ -7,6 +7,7 @@ const { deleteUser } = require('./components/deleteUser');
 const { updateScore } = require('./components/updateScore');
 const { updateDiamond } = require('./components/updateDiamond');
 const { shoppingList } = require('./components/shoppingList');
+const { addInventoryItem } = require('./components/addInventoryItem');
 
 router.post('/createAccount', async (req, res) => {
     const email = req.body.email;
@@ -64,6 +65,16 @@ router.post('/updateDiamond', async (req, res) => {
     const { userId, diamond } = req.body;
     try {
         const results = await updateDiamond(userId, diamond);
+        res.json(results);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.post('/addInventoryItem', async (req, res) => {
+    const { userId, category, itemId } = req.body;
+    try {
+        const results = await addInventoryItem(userId, category, itemId);
         res.json(results);
     } catch (error) {
         res.status(500).json({ error: error.message });

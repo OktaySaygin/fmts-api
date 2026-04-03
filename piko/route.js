@@ -41,10 +41,10 @@ router.get('/allUsers', async (req, res) => {
     }
 });
 
-router.get('/deleteUser', async (req, res) => {
-    //const id = req.body.id;
+router.post('/deleteUser', async (req, res) => {
+    const id = req.body.id;
     try {
-        const results = await deleteUser("69c28a5722cf35590a8ccc64");
+        const results = await deleteUser(id);
         res.json(results);
     } catch (error) {
         res.status(500).json({ error: 'An error occurred while deleting user.' });

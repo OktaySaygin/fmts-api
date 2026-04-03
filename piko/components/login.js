@@ -23,7 +23,7 @@ const login = async (username, password) => {
     }
 
     const token = jwt.sign(
-        { id: user._id, username: user.username },
+        { id: user.id, username: user.username },
         JWT_SECRET,
         { expiresIn: '7d' }
     );
@@ -33,7 +33,7 @@ const login = async (username, password) => {
         message: 'Giriş başarılı.',
         token,
         user: {
-            id: user._id,
+            id: user.id,
             email: user.email,
             username: user.username,
             name: user.name,

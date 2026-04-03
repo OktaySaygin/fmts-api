@@ -31,7 +31,7 @@ const createAccount = async (email, username, password, provider, googleIdToken,
         return {
             success: true,
             message: 'Google ile hesap oluşturuldu.',
-            user: { id: user._id, email: user.email, username: user.username },
+            user: { id: user.id, email: user.email, username: user.username },
         };
     }
 
@@ -58,7 +58,7 @@ const createAccount = async (email, username, password, provider, googleIdToken,
         return {
             success: true,
             message: 'Apple ile hesap oluşturuldu.',
-            user: { id: user._id, email: user.email, username: user.username },
+            user: { id: user.id, email: user.email, username: user.username },
         };
     }
 
@@ -85,7 +85,7 @@ const createAccount = async (email, username, password, provider, googleIdToken,
     return {
         success: true,
         message: 'Hesap başarıyla oluşturuldu.',
-        user: { id: user._id, email: user.email, username: user.username },
+        user: { id: user.id, email: user.email, username: user.username },
     };
 };
 

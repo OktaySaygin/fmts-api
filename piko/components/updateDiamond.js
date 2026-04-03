@@ -13,7 +13,8 @@ const updateDiamond = async (userId, diamond) => {
         return { success: false, message: 'Kullanıcı bulunamadı.' };
     }
 
-    return { success: true, user };
+    const { _id, ...rest } = user.toObject();
+    return { success: true, user: { id: _id, ...rest } };
 };
 
 module.exports = { updateDiamond };

@@ -13,7 +13,8 @@ const updateScore = async (userId, score) => {
         return { success: false, message: 'Kullanıcı bulunamadı.' };
     }
 
-    return { success: true, user };
+    const { _id, ...rest } = user.toObject();
+    return { success: true, user: { id: _id, ...rest } };
 };
 
 module.exports = { updateScore };

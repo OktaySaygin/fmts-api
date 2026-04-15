@@ -42,6 +42,11 @@
                     "id": 8,
                     "name": "Hat 8",
                     "price": 800
+                },
+                {
+                    "id": 9,
+                    "name": "Hat 9",
+                    "price": 900
                 }
             ]
         },

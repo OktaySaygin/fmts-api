@@ -11,7 +11,6 @@ router.get('/all', (req, res) => {
         console.error('Veri alma hatası:', err);
         res.status(500).json({ error: 'Veri alınamadı.' });
     }
-    // res.send("Ohohohoh müdürüm");// this gets executed when user visit http://localhost:3000/user
 });
 
 router.get('/categories', (req, res) => {
@@ -21,7 +20,6 @@ router.get('/categories', (req, res) => {
         console.error('Veri alma hatası:', err);
         res.status(500).json({ error: 'Veri alınamadı.' });
     }
-    // res.send("Ohohohoh müdürüm");// this gets executed when user visit http://localhost:3000/user
 });
 
 module.exports = router;

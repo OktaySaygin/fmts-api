@@ -189,7 +189,8 @@
                     "price": 2500
                 }
             ]
-        }, "clothes": {
+        }, 
+        "clothes": {
             "type": "clothes",
             "items": [
                 {

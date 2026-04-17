@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { createAccount } = require('./components/createAccount');
+const { createGuestAccount } = require('./components/createGuestAccount');
 const { login } = require('./components/login');
 const { allUsers } = require('./components/allUsers');
 const { deleteUser } = require('./components/deleteUser');
@@ -19,6 +20,15 @@ router.post('/createAccount', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }   
+});
+
+router.post('/createGuestAccount', async (req, res) => {
+    try {
+        const results = await createGuestAccount();
+        res.json(results);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 router.post('/login', async (req, res) => {

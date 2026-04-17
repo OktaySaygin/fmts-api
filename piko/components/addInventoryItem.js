@@ -4,8 +4,8 @@ const User = require('../models/User');
 const addInventoryItem = async (userId, category, itemId) => {
     await connectDB();
 
-    if (!['hats', 'eyewears', 'clothes'].includes(category)) {
-        return { success: false, message: 'Geçersiz kategori. hats, eyewears veya clothes olmalı.' };
+    if (!['hats', 'eyewears', 'clothes', 'pants'].includes(category)) {
+        return { success: false, message: 'Geçersiz kategori. hats, eyewears, clothes veya pants olmalı.' };
     }
 
     const field = `inventory.${category}`;

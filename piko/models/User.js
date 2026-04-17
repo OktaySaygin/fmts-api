@@ -47,7 +47,11 @@ const userSchema = new mongoose.Schema(
             clothes: {
                 type: [String],
                 default: [],
-            }
+            },
+            pants: {
+                type: [String],
+                default: [],
+            },
         },
     },
     { timestamps: true }

@@ -214,6 +214,31 @@
                     "price": 400
                 }
             ]
+        },
+        "pants": {
+            "type": "pants",
+            "items": [
+                {
+                    "id": 1,
+                    "name": "Pants 1",
+                    "price": 100
+                },
+                {
+                    "id": 2,
+                    "name": "Pants 2",
+                    "price": 200
+                },
+                {
+                    "id": 3,
+                    "name": "Pants 3",
+                    "price": 300
+                },
+                {
+                    "id": 4,
+                    "name": "Pants 4",
+                    "price": 400
+                }
+            ]
         }
     }
 }

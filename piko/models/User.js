@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema(
         },
         provider: { 
             type: String, 
-            enum: ['local', 'google', 'apple'], 
+            enum: ['local', 'google', 'apple', 'guest'], 
             default: 'local' 
         },
         providerId: {

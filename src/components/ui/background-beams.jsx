@@ -1,7 +1,7 @@
-"use client";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+'use client';
+import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 
 export const BackgroundBeams = ({ className }) => {
   const [beamData, setBeamData] = useState([]);
@@ -48,52 +48,33 @@ export const BackgroundBeams = ({ className }) => {
 
   // Server-side rendering sırasında boş div döndür
   if (!mounted) {
-    return (
-      <div
-        className={cn(
-          "absolute inset-0 overflow-hidden bg-slate-950",
-          className
-        )}
-      />
-    );
+    return <div className={cn('absolute inset-0 overflow-hidden bg-slate-950', className)} />;
   }
 
   return (
-    <div
-      className={cn(
-        "absolute inset-0 overflow-hidden bg-slate-950",
-        className
-      )}
-    >
-      <svg
-        className="absolute inset-0 h-full w-full"
-        width="100%"
-        height="100%"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div className={cn('absolute inset-0 overflow-hidden bg-slate-950', className)}>
+      <svg className='absolute inset-0 h-full w-full' width='100%' height='100%' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <defs>
-          <linearGradient id="beam1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#18CCFC" stopOpacity="0" />
-            <stop offset="50%" stopColor="#18CCFC" stopOpacity="1" />
-            <stop offset="100%" stopColor="#6344F5" stopOpacity="0" />
+          <linearGradient id='beam1' x1='0%' y1='0%' x2='100%' y2='100%'>
+            <stop offset='0%' stopColor='#18CCFC' stopOpacity='0' />
+            <stop offset='50%' stopColor='#18CCFC' stopOpacity='1' />
+            <stop offset='100%' stopColor='#6344F5' stopOpacity='0' />
           </linearGradient>
-          <linearGradient id="beam2" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#6344F5" stopOpacity="0" />
-            <stop offset="50%" stopColor="#6344F5" stopOpacity="1" />
-            <stop offset="100%" stopColor="#18CCFC" stopOpacity="0" />
+          <linearGradient id='beam2' x1='0%' y1='0%' x2='100%' y2='100%'>
+            <stop offset='0%' stopColor='#6344F5' stopOpacity='0' />
+            <stop offset='50%' stopColor='#6344F5' stopOpacity='1' />
+            <stop offset='100%' stopColor='#18CCFC' stopOpacity='0' />
           </linearGradient>
         </defs>
-        {beamData.verticalBeams?.map((beam) => (
+        {beamData.verticalBeams?.map(beam => (
           <motion.line
             key={beam.id}
             x1={beam.x1}
             y1={-10}
             x2={beam.x2}
             y2={110}
-            stroke="url(#beam1)"
-            strokeWidth="0.5"
+            stroke='url(#beam1)'
+            strokeWidth='0.5'
             initial={{
               opacity: 0,
             }}
@@ -105,20 +86,20 @@ export const BackgroundBeams = ({ className }) => {
             transition={{
               duration: beam.duration,
               repeat: Infinity,
-              repeatType: "loop",
+              repeatType: 'loop',
               delay: beam.delay,
             }}
           />
         ))}
-        {beamData.horizontalBeams?.map((beam) => (
+        {beamData.horizontalBeams?.map(beam => (
           <motion.line
             key={beam.id}
             x1={-10}
             y1={beam.y1}
             x2={110}
             y2={beam.y2}
-            stroke="url(#beam2)"
-            strokeWidth="0.5"
+            stroke='url(#beam2)'
+            strokeWidth='0.5'
             initial={{
               opacity: 0,
             }}
@@ -130,16 +111,16 @@ export const BackgroundBeams = ({ className }) => {
             transition={{
               duration: beam.duration,
               repeat: Infinity,
-              repeatType: "loop",
+              repeatType: 'loop',
               delay: beam.delay,
             }}
           />
         ))}
       </svg>
-      {sparkData.map((spark) => (
+      {sparkData.map(spark => (
         <motion.div
           key={spark.id}
-          className="absolute h-px w-px rounded-full bg-blue-500"
+          className='absolute h-px w-px rounded-full bg-blue-500'
           style={{
             top: `${spark.top}%`,
             left: `${spark.left}%`,
@@ -151,11 +132,11 @@ export const BackgroundBeams = ({ className }) => {
           transition={{
             duration: spark.duration,
             repeat: Infinity,
-            repeatType: "loop",
+            repeatType: 'loop',
             delay: spark.delay,
           }}
         />
       ))}
     </div>
   );
-}; 
+};

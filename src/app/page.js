@@ -1,16 +1,19 @@
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import { Spotlight } from "@/components/ui/spotlight";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
-import Hero from "@/components/Hero";
+import Hero from '@/components/sections/Hero';
+import Services from '@/components/sections/Services';
+import Technologies from '@/components/sections/Technologies';
+import Contact from '@/components/sections/Contact';
+import Referances from '@/components/sections/Referances';
+import HowWeWork from '@/components/sections/HowWeWork';
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full relative flex flex-col items-center justify-center antialiased overflow-hidden">
+    <div className='relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden antialiased'>
       <Hero />
+      <Services />
+      <Technologies />
+      <HowWeWork />
+      <Referances />
+      <Contact />
     </div>
   );
 }

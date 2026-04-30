@@ -1,24 +1,19 @@
-"use client";
-import { useEffect, useState } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "@/lib/utils";
+'use client';
+import { useEffect, useState } from 'react';
+import { motion, stagger, useAnimate } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
-export const TextGenerateEffect = ({
-  words,
-  className,
-  filter = true,
-  duration = 0.5,
-}) => {
+export const TextGenerateEffect = ({ words, className, filter = true, duration = 0.5 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
+  let wordsArray = words.split(' ');
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
     animate(
-      "span",
+      'span',
       {
         opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
+        filter: filter ? 'blur(0px)' : 'none',
       },
       {
         duration: duration,
@@ -34,12 +29,12 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="text-white opacity-0"
+              className='text-white opacity-0'
               style={{
-                filter: filter ? "blur(10px)" : "none",
+                filter: filter ? 'blur(10px)' : 'none',
               }}
             >
-              {word}{" "}
+              {word}{' '}
             </motion.span>
           );
         })}
@@ -48,10 +43,8 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-normal", className)}>
-      <div className="leading-snug tracking-wide">
-        {renderWords()}
-      </div>
+    <div className={cn('font-normal', className)}>
+      <div className='leading-snug tracking-wide'>{renderWords()}</div>
     </div>
   );
-}; 
+};

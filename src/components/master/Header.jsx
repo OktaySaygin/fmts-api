@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react';
 import { SparklesText } from '@/components/magicui/sparkles-text';
 import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button';
@@ -58,7 +59,8 @@ const Header = () => {
             <div className='flex h-16 items-center justify-between'>
               {/* Logo */}
               <motion.div className='flex items-center' whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 400, damping: 17 }}>
-                <Link href='/' className='flex items-center space-x-2'>
+                <Link href='/' className='flex items-center space-x-3'>
+                  <Image src='/logo/codever-icon.svg' alt='Codever' width={36} height={36} priority className='h-9 w-9' />
                   <SparklesText text='Codever' className='text-2xl font-black text-white' colors={{ first: '#3B82F6', second: '#8B5CF6' }} sparklesCount={8} />
                 </Link>
               </motion.div>

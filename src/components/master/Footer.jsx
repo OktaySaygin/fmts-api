@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import React from 'react';
 import { motion } from 'motion/react';
 import SparklesText from '@/components/magicui/sparkles-text';
@@ -36,14 +37,14 @@ const Footer = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'info@codever.com',
-      href: 'mailto:info@codever.com',
+      value: 'osaygin@codever.com',
+      href: 'mailto:osaygin@codever.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+90 (555) 123 45 67',
-      href: 'tel:+905551234567',
+      value: '+90 (536) 945 20 83',
+      href: 'tel:+905369452083',
     },
     {
       icon: MapPin,
@@ -65,15 +66,18 @@ const Footer = () => {
             {/* Company Info */}
             <motion.div className='flex flex-col gap-6 lg:col-span-2' initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
               <div>
-                <SparklesText
-                  text='Codever'
-                  className='mb-4 text-3xl font-black text-white'
-                  colors={{
-                    first: '#3B82F6',
-                    second: '#8B5CF6',
-                  }}
-                  sparklesCount={6}
-                />
+                <div className='mb-4 flex items-center gap-3'>
+                  <Image src='/logo/codever-icon.svg' alt='Codever' width={48} height={48} className='h-12 w-12' />
+                  <SparklesText
+                    text='Codever'
+                    className='text-3xl font-black text-white'
+                    colors={{
+                      first: '#3B82F6',
+                      second: '#8B5CF6',
+                    }}
+                    sparklesCount={6}
+                  />
+                </div>
                 <p className='max-w-md text-lg leading-relaxed text-white/70'>
                   Codever is one of the most prestigious software companies in Turkey, founded in 2025 by <strong className='text-white'>Oktay Saygın</strong> and <strong className='text-white'>Sedat Budak</strong>. We turn your dreams into reality using modern technologies.
                 </p>

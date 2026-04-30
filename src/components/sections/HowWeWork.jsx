@@ -61,7 +61,6 @@ const HowWeWork = () => {
   }, []);
 
   const companyStats = [
-    { label: 'Completed Projects', value: 150, suffix: '+', gradient: 'from-blue-400 to-cyan-400' },
     { label: 'Happy Clients', value: 120, suffix: '+', gradient: 'from-purple-400 to-pink-400' },
     { label: 'Team Members', value: 25, suffix: '+', gradient: 'from-green-400 to-emerald-400' },
     { label: 'Years of Experience', value: 8, suffix: '+', gradient: 'from-orange-400 to-red-400' },
@@ -106,7 +105,7 @@ const HowWeWork = () => {
         </motion.div>
 
         {/* Company Stats */}
-        <motion.div className='mb-20 grid grid-cols-2 gap-6 md:grid-cols-4' variants={containerVariants} initial='hidden' animate={isInView ? 'visible' : 'hidden'}>
+        <motion.div className='mb-20 grid grid-cols-1 gap-6 md:grid-cols-3' variants={containerVariants} initial='hidden' animate={isInView ? 'visible' : 'hidden'}>
           {companyStats.map((stat, index) => (
             <motion.div key={index} variants={itemVariants} className='group relative h-full' transition={{ type: 'spring', stiffness: 300 }}>
               <div className='h-full! rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md transition-all duration-300'>

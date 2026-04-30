@@ -51,28 +51,28 @@ const Contact = () => {
     {
       icon: <Mail className='h-6 w-6' />,
       title: 'Email',
-      info: 'hello@codever.com',
-      link: 'mailto:hello@codever.com',
+      info: 'osaygin@codever.com',
+      link: 'mailto:osaygin@codever.com',
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
       icon: <Phone className='h-6 w-6' />,
       title: 'Phone',
-      info: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      info: '+90 (536) 945 20 83',
+      link: 'tel:+905369452083',
       gradient: 'from-purple-500 to-pink-500',
     },
     {
       icon: <MapPin className='h-6 w-6' />,
       title: 'Location',
-      info: 'New York, NY 10001',
+      info: 'Istanbul, Türkiye',
       link: 'https://maps.google.com',
       gradient: 'from-green-500 to-emerald-500',
     },
     {
       icon: <Clock className='h-6 w-6' />,
       title: 'Working Hours',
-      info: 'Mon-Fri: 9AM-6PM EST',
+      info: 'Mon-Fri: 8:00 AM - 6:00 PM',
       link: null,
       gradient: 'from-orange-500 to-red-500',
     },
@@ -112,7 +112,6 @@ const Contact = () => {
   const stats = [
     { number: 24, label: 'Response Time', suffix: 'h', gradient: 'from-blue-400 to-cyan-400' },
     { number: 98, label: 'Client Satisfaction', suffix: '%', gradient: 'from-purple-400 to-pink-400' },
-    { number: 500, label: 'Projects Delivered', suffix: '+', gradient: 'from-green-400 to-emerald-400' },
     { number: 50, label: 'Countries Served', suffix: '+', gradient: 'from-orange-400 to-red-400' },
   ];
 
@@ -142,7 +141,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div className='mb-20 grid grid-cols-2 gap-6 md:grid-cols-4' initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} transition={{ duration: 1, delay: 1 }}>
+        <motion.div className='mb-20 grid grid-cols-1 gap-6 md:grid-cols-3' initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} transition={{ duration: 1, delay: 1 }}>
           {stats.map((stat, index) => (
             <motion.div key={index} className='group relative h-full' whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
               <div className='h-full rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/10'>

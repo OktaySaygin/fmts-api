@@ -22,7 +22,7 @@ const Services = () => {
        description: 'Beautiful, fast websites that attract customers and drive sales. Mobile-friendly and search engine optimized.',
        features: ['Mobile-Responsive Design', 'Fast Loading Speed', 'SEO Optimized', 'Easy to Update'],
       gradient: 'from-blue-500 to-cyan-500',
-      stats: { projects: 50, satisfaction: 98 },
+      stats: { satisfaction: 98 },
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const Services = () => {
        description: 'Custom mobile applications that keep your customers engaged and increase business reach.',
        features: ['iOS & Android Apps', 'User-Friendly Interface', 'Push Notifications', 'App Store Publishing'],
       gradient: 'from-purple-500 to-pink-500',
-      stats: { projects: 30, satisfaction: 95 },
+      stats: { satisfaction: 95 },
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Services = () => {
        description: 'Custom desktop applications that streamline your business processes and increase productivity.',
        features: ['Process Automation', 'Data Management', 'User Training', 'Ongoing Support'],
       gradient: 'from-green-500 to-emerald-500',
-      stats: { projects: 25, satisfaction: 97 },
+      stats: { satisfaction: 97 },
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ const Services = () => {
        description: 'Professional designs that make your brand stand out and attract more customers.',
        features: ['Logo Design', 'Brand Identity', 'Marketing Materials', 'User Experience'],
       gradient: 'from-orange-500 to-red-500',
-      stats: { projects: 80, satisfaction: 99 },
+      stats: { satisfaction: 99 },
     },
     {
       id: 5,
@@ -58,7 +58,7 @@ const Services = () => {
        description: 'Secure data storage and management systems that protect your business information.',
        features: ['Data Security', 'Backup Solutions', 'Cloud Storage', 'Performance Monitoring'],
       gradient: 'from-indigo-500 to-blue-500',
-      stats: { projects: 45, satisfaction: 96 },
+      stats: { satisfaction: 96 },
     },
     {
       id: 6,
@@ -67,12 +67,11 @@ const Services = () => {
        description: 'Ongoing technical support and maintenance to keep your systems running smoothly.',
        features: ['24/7 Support', 'Regular Updates', 'Security Monitoring', 'Performance Optimization'],
       gradient: 'from-teal-500 to-cyan-500',
-      stats: { projects: 35, satisfaction: 94 },
+      stats: { satisfaction: 94 },
     },
   ];
 
   const stats = [
-    { number: 200, label: 'Projects Completed', suffix: '+', gradient: 'from-blue-400 to-cyan-400' },
     { number: 150, label: 'Happy Clients', suffix: '+', gradient: 'from-purple-400 to-pink-400' },
     { number: 98, label: 'Satisfaction Rate', suffix: '%', gradient: 'from-green-400 to-emerald-400' },
     { number: 24, label: 'Support Hours', suffix: '/7', gradient: 'from-orange-400 to-red-400' },
@@ -102,7 +101,7 @@ const Services = () => {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div className='mb-20 grid grid-cols-2 gap-6 md:grid-cols-4' initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} transition={{ duration: 1, delay: 1 }}>
+        <motion.div className='mb-20 grid grid-cols-1 gap-6 md:grid-cols-3' initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} transition={{ duration: 1, delay: 1 }}>
           {stats.map((stat, index) => (
             <motion.div key={index} className='group relative h-full' whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
               <div className='h-full rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/10'>
@@ -164,10 +163,6 @@ const Services = () => {
                 {/* Stats */}
                 <div className='flex items-center justify-between border-t border-white/10 pt-6'>
                   <div className='flex space-x-6'>
-                    <div className='text-center'>
-                      <div className={`bg-gradient-to-r ${service.gradient} bg-clip-text text-xl font-bold text-transparent`}>{service.stats.projects}+</div>
-                      <div className='text-xs text-neutral-500'>Projects</div>
-                    </div>
                     <div className='text-center'>
                       <div className={`bg-gradient-to-r ${service.gradient} bg-clip-text text-xl font-bold text-transparent`}>{service.stats.satisfaction}%</div>
                       <div className='text-xs text-neutral-500'>Satisfaction</div>

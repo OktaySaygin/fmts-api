@@ -28,7 +28,6 @@ const Technologies = () => {
 
   const stats = [
     { number: 50, label: 'Business Solutions', suffix: '+', gradient: 'from-blue-400 to-cyan-400' },
-    { number: 1000, label: 'Successful Projects', suffix: '+', gradient: 'from-purple-400 to-pink-400' },
     { number: 5, label: 'Years Experience', suffix: '+', gradient: 'from-green-400 to-emerald-400' },
     { number: 99, label: 'Client Satisfaction', suffix: '%', gradient: 'from-orange-400 to-red-400' },
   ];
@@ -100,7 +99,7 @@ const Technologies = () => {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div className='mb-20 grid grid-cols-2 gap-6 md:grid-cols-4' initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} transition={{ duration: 1, delay: 1 }}>
+        <motion.div className='mb-20 grid grid-cols-1 gap-6 md:grid-cols-3' initial={{ opacity: 0, y: 40 }} animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }} transition={{ duration: 1, delay: 1 }}>
           {stats.map((stat, index) => (
             <motion.div key={index} className='group relative h-full' whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
               <div className='h-full rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/10'>
@@ -154,12 +153,6 @@ const Technologies = () => {
                   <div className='h-2 rounded-full bg-white/10'>
                     <motion.div className={`h-full rounded-full bg-gradient-to-r ${tech.gradient}`} initial={{ width: 0 }} animate={isInView ? { width: `${tech.level}%` } : { width: 0 }} transition={{ duration: 1, delay: 1.8 + index * 0.1 }} />
                   </div>
-                </div>
-
-                {/* Projects Count */}
-                <div className='flex items-center justify-between'>
-                  <span className='text-sm text-neutral-500'>Projects</span>
-                  <span className={`bg-gradient-to-r text-lg font-bold ${tech.gradient} bg-clip-text text-transparent`}>{tech.projects}+</span>
                 </div>
 
                 {/* Business Value */}

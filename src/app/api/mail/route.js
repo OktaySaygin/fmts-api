@@ -121,7 +121,7 @@ export async function POST(request) {
     // Admin'e gönderilecek mail
     const adminMailOptions = {
       from: process.env.GMAIL_USER || 'your-email@gmail.com',
-      to: 'info@codever.com',
+      to: 'osaygin@codever.com',
       subject: `New Contact Form: ${subject}`,
       html: htmlContent,
       replyTo: email
@@ -161,7 +161,7 @@ export async function POST(request) {
           </div>
           
           <p style="color: #333; font-size: 16px; line-height: 1.6;">
-            If you have any urgent questions, feel free to call us at <strong>+1 (555) 123-4567</strong> or email us directly at <strong>info@codever.com</strong>.
+            If you have any urgent questions, feel free to call us at <strong>+90 (536) 945-2083</strong> or email us directly at <strong>osaygin@codever.com</strong>.
           </p>
           
           <div style="text-align: center; margin-top: 30px;">

@@ -41,7 +41,7 @@ const ContactPage = () => {
     setSubmitStatus('sending');
 
     try {
-      // Send mail to info@codever.com
+      // Send mail to osaygin@codever.com
       const response = await fetch('/api/mail', {
         method: 'POST',
         headers: {
@@ -85,23 +85,23 @@ const ContactPage = () => {
     {
       icon: <Mail className='h-6 w-6' />,
       title: 'Email Address',
-      info: 'hello@codever.com',
+      info: 'osaygin@codever.com',
       description: 'Send us an email anytime!',
-      link: 'mailto:hello@codever.com',
+      link: 'mailto:osaygin@codever.com',
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
       icon: <Phone className='h-6 w-6' />,
       title: 'Phone Number',
-      info: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 5pm',
-      link: 'tel:+15551234567',
+      info: '+90 (536) 945 20 83',
+      description: 'Mon-Fri from 8:00 AM to 6:00 PM',
+      link: 'tel:+905369452083',
       gradient: 'from-green-500 to-emerald-500',
     },
     {
       icon: <MapPin className='h-6 w-6' />,
       title: 'Office Address',
-      info: '123 Business St, Tech City, TC 12345',
+      info: 'Istanbul, Türkiye',
       description: 'Visit our modern office',
       link: 'https://maps.google.com',
       gradient: 'from-purple-500 to-pink-500',
@@ -356,7 +356,7 @@ const ContactPage = () => {
                     <div className='flex h-5 w-5 items-center justify-center'>
                       <div className='h-2 w-2 rounded-full bg-red-400'></div>
                     </div>
-                    <span>Sorry, there was an error sending your message. Please try again or contact us directly at info@codever.com.</span>
+                    <span>Sorry, there was an error sending your message. Please try again or contact us directly at osaygin@codever.com.</span>
                   </motion.div>
                 )}
               </form>

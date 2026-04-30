@@ -20,7 +20,6 @@ const References = () => {
   }, []);
 
   const stats = [
-    { number: '50+', label: 'Projects Completed', gradient: 'from-blue-400 to-cyan-400' },
     { number: '98%', label: 'Client Satisfaction', gradient: 'from-purple-400 to-pink-400' },
     { number: '24/7', label: 'Support Availability', gradient: 'from-green-400 to-emerald-400' },
     { number: '100%', label: 'Average Rating', gradient: 'from-orange-400 to-red-400' },
@@ -49,7 +48,7 @@ const References = () => {
         </motion.div>
 
         {/* Stats Section */}
-        <motion.div className='mb-20 grid grid-cols-2 gap-6 md:grid-cols-4' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
+        <motion.div className='mb-20 grid grid-cols-1 gap-6 md:grid-cols-3' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 1 }}>
           {stats.map((stat, index) => (
             <motion.div key={index} className='group relative' whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
               <div className='flex h-full items-center justify-center space-x-4 rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md transition-all duration-300 hover:border-white/20 hover:bg-white/10'>

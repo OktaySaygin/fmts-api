@@ -6,6 +6,8 @@ const jwt = require('jsonwebtoken');
 
 const googleClient = new OAuth2Client('412792318888-hl34mlmg46d6hv3lsvktqpr1q22i5vvq.apps.googleusercontent.com');
 
+const JWT_SECRET = process.env.JWT_SECRET || 'piko_secret_key_change_in_production';
+
 const createAccount = async (email, username, password, provider, googleIdToken, appleIdentityToken) => {
     await connectDB();
 
@@ -28,10 +30,26 @@ const createAccount = async (email, username, password, provider, googleIdToken,
             providerId: payload.sub,
         });
 
+        const token = jwt.sign(
+            { id: user.id, username: user.username },
+            JWT_SECRET,
+            { expiresIn: '7d' }
+        );
+
         return {
             success: true,
             message: 'Google ile hesap oluşturuldu.',
-            user: { id: user.id, email: user.email, username: user.username },
+            token,
+            user: {
+                id: user.id,
+                email: user.email,
+                username: user.username,
+                name: user.name,
+                surname: user.surname,
+                score: user.score,
+                diamond: user.diamond,
+                inventory: user.inventory,
+            },
         };
     }
 
@@ -55,10 +73,26 @@ const createAccount = async (email, username, password, provider, googleIdToken,
             providerId: appleUserId,
         });
 
+        const token = jwt.sign(
+            { id: user.id, username: user.username },
+            JWT_SECRET,
+            { expiresIn: '7d' }
+        );
+
         return {
             success: true,
             message: 'Apple ile hesap oluşturuldu.',
-            user: { id: user.id, email: user.email, username: user.username },
+            token,
+            user: {
+                id: user.id,
+                email: user.email,
+                username: user.username,
+                name: user.name,
+                surname: user.surname,
+                score: user.score,
+                diamond: user.diamond,
+                inventory: user.inventory,
+            },
         };
     }
 
@@ -82,10 +116,26 @@ const createAccount = async (email, username, password, provider, googleIdToken,
         provider: 'local',
     });
 
+    const token = jwt.sign(
+        { id: user.id, username: user.username },
+        JWT_SECRET,
+        { expiresIn: '7d' }
+    );
+
     return {
         success: true,
         message: 'Hesap başarıyla oluşturuldu.',
-        user: { id: user.id, email: user.email, username: user.username },
+        token,
+        user: {
+            id: user.id,
+            email: user.email,
+            username: user.username,
+            name: user.name,
+            surname: user.surname,
+            score: user.score,
+            diamond: user.diamond,
+            inventory: user.inventory,
+        },
     };
 };
 

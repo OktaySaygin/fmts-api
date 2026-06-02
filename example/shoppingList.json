@@ -57,6 +57,11 @@
                     "id": 11,
                     "name": "Hat 11",
                     "price": 1100
+                },
+                {
+                    "id": 12,
+                    "name": "Hat 12",
+                    "price": 1200
                 }
             ]
         },
@@ -237,6 +242,11 @@
                     "id": 4,
                     "name": "Pants 4",
                     "price": 400
+                },
+                {
+                    "id": 5,
+                    "name": "Pants 5",
+                    "price": 500
                 }
             ]
         }

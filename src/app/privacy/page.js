@@ -73,8 +73,9 @@ const sections = [
   {
     title: '9. Your Rights',
     body: [
-      'You may request access to, correction of, or deletion of your account data at any time. To delete your account and associated data, please contact us using the details below.',
+      'You may request access to, correction of, or deletion of your account data at any time. You can ask us to permanently delete your account and all associated data (your score, diamonds, and inventory) using the link below, or by contacting us directly.',
     ],
+    link: { href: '/delete-account', label: 'Request account deletion' },
   },
   {
     title: '10. Changes to This Policy',
@@ -107,6 +108,14 @@ const PrivacyPage = () => {
                   {paragraph}
                 </p>
               ))}
+              {section.link && (
+                <a
+                  href={section.link.href}
+                  className='mt-2 inline-block font-medium text-blue-400 underline transition-colors hover:text-blue-300'
+                >
+                  {section.link.label}
+                </a>
+              )}
               {section.list && (
                 <ul className='mt-2 list-disc space-y-2 pl-6 text-neutral-300'>
                   {section.list.map((item, i) => (

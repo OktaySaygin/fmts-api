@@ -13,7 +13,7 @@ const sections = [
   {
     title: '1. Introduction',
     body: [
-      'This Privacy Policy explains how Oktay Saygın, the developer of Pikoo (the "Game"), collects, uses, and protects your information when you play the Game. By creating an account or playing the Game, you agree to the practices described in this policy.',
+      'This Privacy Policy explains how Oktay Saygın, the developer of Pikoo, collects, uses, and protects your information when you play the Game. By creating an account or playing the Game, you agree to the practices described in this policy.',
       'Pikoo is a casual arcade game in which players climb as high as possible while collecting in-game items. We are committed to keeping the amount of personal data we collect to the minimum required to run the Game.',
     ],
   },

@@ -6,9 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "linkforty": "node linkforty-server.mjs",
-    "linkforty:dev": "nodemon --experimental-vm-modules linkforty-server.mjs"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
@@ -74,7 +72,6 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.6",
-    "nodemon": "^3.1.9",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.4"
   },
